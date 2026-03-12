@@ -40,7 +40,7 @@ const SCHOOL_CONFIG = {
 
   /* ── Google Maps ───────────────────────────────────────────── */
   mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3565.0!2d83.78!3d26.50!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDMwJzAwLjAiTiA4M8KwNDYnNDguMCJF!5e0!3m2!1sen!2sin!4v1700000000000",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3565.0!2d84.0517017!3d26.3502544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3993b3aedc9f8dc9%3A0x52a69f6813e10756!2sGurukul%20Shikshan%20Sansthan!5e0!3m2!1sen!2sin!4v1700000000000",
 
   /* ── Social Media ──────────────────────────────────────────── */
   social: {
@@ -70,7 +70,7 @@ const SCHOOL_CONFIG = {
 
   /* ── Academics ─────────────────────────────────────────────── */
   academics: [
-    { icon: "fa-baby",          title: "Nursery",       classes: "Play Group – UKG", desc: "A nurturing foundation through play-based learning and creative exploration." },
+    { icon: "fa-baby",          title: "Nursery",       classes: "LKG – UKG", desc: "A nurturing foundation through play-based learning and creative exploration." },
     { icon: "fa-child",         title: "Primary",       classes: "Class I – V",       desc: "Building strong fundamentals in language, mathematics, science and social skills." },
     { icon: "fa-user-graduate", title: "Middle School",  classes: "Class VI – VIII",   desc: "Deepening knowledge with analytical thinking and project-based learning." },
     { icon: "fa-graduation-cap",title: "High School",    classes: "Class IX – X",      desc: "Board exam preparation with comprehensive academic and career guidance." }
@@ -86,10 +86,10 @@ const SCHOOL_CONFIG = {
 
   /* ── Animated Counters ─────────────────────────────────────── */
   counters: [
-    { value: 1000, suffix: "+", label: "Students" },
-    { value: 50,   suffix: "+", label: "Expert Teachers" },
-    { value: 15,   suffix: "+", label: "Years of Excellence" },
-    { value: 95,   suffix: "%", label: "Board Results" }
+    { value: 650, suffix: "+", label: "Students" },
+    { value: 15,   suffix: "+", label: "Expert Teachers" },
+    { value: 18,   suffix: "+", label: "Years of Excellence" },
+    { value: 100,   suffix: "%", label: "Board Results" }
   ],
 
   /* ── Gallery Images (placeholders — replace with real paths) ─ */
