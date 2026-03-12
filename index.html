@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gurukul Shikshan Sansthan — Quality education rooted in values, located in Khampar (Jaipur), Deoria, Uttar Pradesh." />
+  <meta name="theme-color" content="#0f2557" />
+  <title>Gurukul Shikshan Sansthan — Shaping Knowledge, Character &amp; Future</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  PRELOADER                                              ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-spinner"></div>
+    <p>Loading&hellip;</p>
+  </div>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  NAVBAR                                                 ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="nav-brand">
+        <img data-cfg="logo" src="logo.png" alt="School Logo" />
+        <span data-cfg="name">Gurukul Shikshan Sansthan</span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#academics">Academics</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#" data-cfg="loginUrl" class="btn-login"><i class="fas fa-sign-in-alt"></i> Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  1. HERO SECTION                                        ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <section class="hero" id="home">
+    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&q=80');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="hero-particles"></div>
+
+    <!-- Admission Side Banner (configurable: set showAdmissionBanner to false in config to hide) -->
+    <a href="#admissions" class="admission-side-banner" id="admission-banner-left">
+      <div class="asb-free">
+        <span data-cfg="admissionBannerFree">FREE</span>
+      </div>
+      <div class="asb-label" data-cfg="admissionBannerLabel">ADMISSION</div>
+      <div class="asb-divider"></div>
+      <div class="asb-hindi" data-cfg="admissionBannerHindi">प्रवेश प्रारंभ</div>
+      <div class="asb-session" data-cfg="admissionBannerSession">सत्र 2026-27</div>
+      <div class="asb-cta">Apply Now <i class="fas fa-arrow-right"></i></div>
+      <span class="asb-glow"></span>
+    </a>
+
+    <div class="hero-content">
+      <div class="hero-badge-pill" data-cfg="heroBadge">विगत 18 वर्षो से संचालित खामपार की No. 1 School 🏫</div>
+      <img data-cfg="logo" class="hero-logo" src="logo.png" alt="School Logo" />
+      <h1 data-cfg="name">Gurukul Shikshan Sansthan</h1>
+      <p class="hero-address" data-cfg="address">Khampar (Jaipur), Deoria, Uttar Pradesh, India</p>
+      <p class="tagline" data-cfg="tagline">Shaping Knowledge, Character &amp; Future</p>
+      <div class="hero-buttons">
+        <a href="#admissions" class="btn btn-primary"><i class="fas fa-graduation-cap"></i> Admission Enquiry</a>
+        <a href="#contact" class="btn btn-outline"><i class="fas fa-phone-alt"></i> Contact Us</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <a href="#about"><i class="fas fa-chevron-down"></i></a>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  2. ABOUT SCHOOL                                        ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <section class="section-padding" id="about" style="background:var(--light);">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80" alt="School Campus" />
+        </div>
+        <div class="about-text reveal">
+          <h2 data-cfg="aboutTitle">About Our School</h2>
+          <div id="about-text-content">
+            <!-- Populated from config -->
+          </div>
+          <div class="about-badge">
+            <i class="fas fa-award"></i>
+            <span>Excellence in Education Since Establishment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  3. FACILITIES                                          ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <section class="section-padding" id="facilities">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Our Facilities</h2>
+        <p>State-of-the-art infrastructure to support holistic learning</p>
+      </div>
+      <div class="cards-grid" id="facilities-cards">
+        <!-- Rendered from config -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  4. ACADEMICS                                           ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <section class="section-padding glass-section" id="academics">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Academics</h2>
+        <p>Comprehensive education from nursery to high school</p>
+      </div>
+      <div class="cards-grid cards-grid-4" id="academics-cards">
+        <!-- Rendered from config -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  5. WHY CHOOSE US + COUNTERS                            ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <section class="section-padding" id="why-us">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Why Choose Us</h2>
+        <p>What sets Gurukul Shikshan Sansthan apart</p>
+      </div>
+      <div class="cards-grid cards-grid-4" id="why-cards">
+        <!-- Rendered from config -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Counters -->
+  <section class="section-padding glass-section" style="padding-top:0;">
+    <div class="container">
+      <div class="counters" id="counters">
+        <!-- Rendered from config -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  6. GALLERY                                             ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <section class="section-padding" id="gallery" style="background:var(--light);">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Gallery</h2>
+        <p>Glimpses of life at Gurukul Shikshan Sansthan</p>
+      </div>
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Rendered from config -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  7. ADMISSIONS CTA                                      ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <section class="admission-cta" id="admissions">
+    <h2 data-cfg="admissionTitle">Admissions Open 2026-27</h2>
+    <p data-cfg="admissionText">Give your child the gift of quality education rooted in values. Join the Gurukul family today!</p>
+    <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Apply Now</a>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  8. CONTACT                                             ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Info + Map -->
+        <div class="reveal">
+          <div class="contact-info-block">
+            <div class="contact-info-item">
+              <div class="icon-box"><i class="fas fa-school"></i></div>
+              <div>
+                <h4 data-cfg="name">Gurukul Shikshan Sansthan</h4>
+                <p>
+                  <span data-cfg="addressLine1">Khampar (Jaipur)</span><br />
+                  <span data-cfg="addressLine2">Deoria, Uttar Pradesh</span><br />
+                  <span data-cfg="addressLine3">India</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <p><a data-cfg="phoneLink" href="tel:+91XXXXXXXXXX"><span data-cfg="phone">+91 XXXXXXXXXX</span></a></p>
+                <p id="phone2-line" style="display:none;"><a data-cfg="phone2Link" href=""><span data-cfg="phone2"></span></a></p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="icon-box"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p><a data-cfg="emailLink" href="mailto:info@gurukulkhampar.in"><span data-cfg="email">info@gurukulkhampar.in</span></a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-map">
+            <iframe data-cfg="map" src="" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="School Location"></iframe>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="reveal">
+          <form class="contact-form" id="contact-form">
+            <h3><i class="fas fa-envelope-open-text"></i> Send a Message</h3>
+
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Full Name" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Phone Number" required />
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <select name="enquiry">
+                <option value="" disabled selected>Select Enquiry Type</option>
+                <option value="admission">Admission Enquiry</option>
+                <option value="general">General Enquiry</option>
+                <option value="fee">Fee Structure</option>
+                <option value="transfer">Transfer Certificate</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  9. FLOATING WHATSAPP BUTTON                            ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <a id="whatsapp-float" class="whatsapp-float" href="#" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  BACK TO TOP                                            ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  10. FOOTER                                             ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1 — About -->
+        <div class="footer-about">
+          <h3 data-cfg="name">Gurukul Shikshan Sansthan</h3>
+          <p>Providing quality education rooted in Indian values and modern learning methodologies. Building the leaders of tomorrow from the heart of Uttar Pradesh.</p>
+          <div class="footer-social">
+            <a data-social="facebook" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a data-social="instagram" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a data-social="twitter" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a data-social="youtube" href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2 — Quick Links -->
+        <div>
+          <h3>Quick Links</h3>
+          <div class="footer-links" id="footer-links">
+            <!-- Rendered from config -->
+          </div>
+        </div>
+
+        <!-- Col 3 — Contact Info -->
+        <div class="footer-contact-info">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-map-marker-alt"></i> <span data-cfg="address">Khampar (Jaipur), Deoria, UP</span></p>
+          <p><i class="fas fa-phone-alt"></i> <span data-cfg="phone">+91 XXXXXXXXXX</span></p>
+          <p><i class="fas fa-envelope"></i> <span data-cfg="email">info@gurukulkhampar.in</span></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; <span id="year"></span> <span data-cfg="name">Gurukul Shikshan Sansthan</span>. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Scripts ────────────────────────────────────────────── -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
