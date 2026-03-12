@@ -1312,7 +1312,10 @@ ul { list-style: none; }
   .cards-grid { grid-template-columns: 1fr; }
   .cards-grid-4 { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .counters { grid-template-columns: repeat(2, 1fr); max-width: 400px; gap: 16px; }
+  .counters { grid-template-columns: repeat(2, 1fr); max-width: 320px; gap: 12px; margin-top: 40px; }
+  .counter-item { padding: 16px 10px; }
+  .counter-number { font-size: 2rem; }
+  .counter-label { font-size: 0.8rem; }
 
   .contact-grid { grid-template-columns: 1fr; }
   .slider-notice-grid { grid-template-columns: 1fr; }
