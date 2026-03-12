@@ -153,6 +153,44 @@ document.addEventListener("DOMContentLoaded", () => {
   setText("[data-cfg='admissionTitle']", C.admissionTitle);
   setText("[data-cfg='admissionText']", C.admissionText);
 
+  /* ── Image Slider ─────────────────────────────────────────── */
+  const sliderWrapper = document.getElementById("slider-wrapper");
+  const sliderDotsContainer = document.getElementById("slider-dots");
+  if (sliderWrapper && sliderDotsContainer && C.sliderImages && C.sliderImages.length) {
+    sliderWrapper.innerHTML = C.sliderImages
+      .map(s => `<div class="slider-slide"><img src="${s.src}" alt="${escapeHTML(s.alt)}" loading="lazy"><div class="slider-caption">${escapeHTML(s.alt)}</div></div>`)
+      .join("");
+
+    sliderDotsContainer.innerHTML = C.sliderImages
+      .map((_, i) => `<button class="slider-dot${i === 0 ? ' active' : ''}" data-slide="${i}" aria-label="Go to slide ${i + 1}"></button>`)
+      .join("");
+
+    let currentSlide = 0;
+    const totalSlides = C.sliderImages.length;
+    const dots = sliderDotsContainer.querySelectorAll(".slider-dot");
+
+    const goToSlide = idx => {
+      currentSlide = ((idx % totalSlides) + totalSlides) % totalSlides;
+      sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle("active", i === currentSlide));
+    };
+
+    document.getElementById("slider-prev").addEventListener("click", () => { goToSlide(currentSlide - 1); resetAutoSlide(); });
+    document.getElementById("slider-next").addEventListener("click", () => { goToSlide(currentSlide + 1); resetAutoSlide(); });
+    dots.forEach(dot => dot.addEventListener("click", () => { goToSlide(parseInt(dot.dataset.slide, 10)); resetAutoSlide(); }));
+
+    let autoSlide = setInterval(() => goToSlide(currentSlide + 1), 4000);
+    const resetAutoSlide = () => { clearInterval(autoSlide); autoSlide = setInterval(() => goToSlide(currentSlide + 1), 4000); };
+  }
+
+  /* ── Notice Board ─────────────────────────────────────────── */
+  const noticeList = document.getElementById("notice-list");
+  if (noticeList && C.notices && C.notices.length) {
+    noticeList.innerHTML = C.notices
+      .map(n => `<div class="notice-item"><div class="notice-date"><i class="fas fa-calendar-alt"></i> ${escapeHTML(n.date)}</div><h4>${escapeHTML(n.title)}</h4><p>${escapeHTML(n.detail)}</p></div>`)
+      .join("");
+  }
+
   /* ── Render Footer Quick Links ────────────────────────────── */
   const footerLinks = document.getElementById("footer-links");
   if (footerLinks) {

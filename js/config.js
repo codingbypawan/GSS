@@ -33,7 +33,7 @@ const SCHOOL_CONFIG = {
   address: "Khampar (Jaipur), Deoria, Uttar Pradesh, India",
   addressLine1: "Khampar (Jaipur)",
   addressLine2: "Deoria, Uttar Pradesh",
-  addressLine3: "India",
+  addressLine3: "",
 
   /* ── URLs ──────────────────────────────────────────────────── */
   loginUrl: "https://login.gurukulkhampar.in",
@@ -107,6 +107,24 @@ const SCHOOL_CONFIG = {
   /* ── Admissions CTA ────────────────────────────────────────── */
   admissionTitle: "Admissions Open 2026-27",
   admissionText: "Give your child the gift of quality education rooted in values. Join the Gurukul family today!",
+
+  /* ── Image Slider ──────────────────────────────────────────── */
+  sliderImages: [
+    { src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80", alt: "School Campus" },
+    { src: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80", alt: "Library" },
+    { src: "https://images.unsplash.com/photo-1588072432836-e10032774350?w=800&q=80", alt: "Classroom" },
+    { src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80", alt: "Students Learning" },
+    { src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&q=80", alt: "Computer Lab" }
+  ],
+
+  /* ── Notice Board ──────────────────────────────────────────── */
+  notices: [
+    { date: "10 Mar 2026", title: "Admission Open for Session 2026-27", detail: "New admissions are now open for Nursery to Class X. Apply before 30 April 2026." },
+    { date: "05 Mar 2026", title: "Annual Sports Day 2026", detail: "Annual Sports Day will be held on 20 March 2026. All students must participate." },
+    { date: "28 Feb 2026", title: "Parent-Teacher Meeting", detail: "PTM scheduled for 15 March 2026 from 10:00 AM to 1:00 PM." },
+    { date: "20 Feb 2026", title: "Science Exhibition", detail: "Inter-class Science Exhibition on 25 March. Register with your class teacher." },
+    { date: "15 Feb 2026", title: "Winter Vacation Homework", detail: "Submit all holiday homework by 1 March 2026 to respective class teachers." }
+  ],
 
   /* ── Quick Links (footer) ──────────────────────────────────── */
   quickLinks: [
